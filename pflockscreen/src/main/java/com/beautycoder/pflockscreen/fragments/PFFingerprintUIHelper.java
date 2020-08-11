@@ -95,7 +95,7 @@ public class PFFingerprintUIHelper extends FingerprintManagerCompat.Authenticati
         mErrorTextView.removeCallbacks(mResetErrorTextRunnable);
         mIcon.setImageResource(R.drawable.ic_fingerprint_success_pf);
         mErrorTextView.setTextColor(
-                mErrorTextView.getResources().getColor(R.color.success_color, null));
+                mErrorTextView.getResources().getColor(R.color.success_color_pf, null));
         mErrorTextView.setText(
                 mErrorTextView.getResources().getString(R.string.fingerprint_success_pf));
         mIcon.postDelayed(new Runnable() {
@@ -110,7 +110,7 @@ public class PFFingerprintUIHelper extends FingerprintManagerCompat.Authenticati
         mIcon.setImageResource(R.drawable.ic_fingerprint_error_pf);
         mErrorTextView.setText(error);
         mErrorTextView.setTextColor(
-                mErrorTextView.getResources().getColor(R.color.warning_color, null));
+                mErrorTextView.getResources().getColor(R.color.warning_color_pf, null));
         mErrorTextView.removeCallbacks(mResetErrorTextRunnable);
         mErrorTextView.postDelayed(mResetErrorTextRunnable, ERROR_TIMEOUT_MILLIS);
     }
@@ -119,7 +119,7 @@ public class PFFingerprintUIHelper extends FingerprintManagerCompat.Authenticati
         @Override
         public void run() {
             mErrorTextView.setTextColor(
-                    mErrorTextView.getResources().getColor(R.color.hint_color, null));
+                    mErrorTextView.getResources().getColor(R.color.hint_color_pf, null));
             mErrorTextView.setText(
                     mErrorTextView.getResources().getString(R.string.fingerprint_hint_pf));
             mIcon.setImageResource(R.drawable.ic_fp_40px_pf);

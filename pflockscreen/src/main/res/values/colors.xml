@@ -4,7 +4,13 @@
     <color name="background_lock_screen_pf">#663333</color>
     <color name="code_lock_screen_pf">#ffffff</color>
     <color name="white_selector_pf">#66ffffff</color>
-    <color name="hint_color">#42000000</color>
-    <color name="warning_color">#f4511e</color>
-    <color name="success_color">#009688</color>
+    <color name="hint_color_pf">#42000000</color>
+    <color name="warning_color_pf">#f4511e</color>
+    <color name="success_color_pf">#009688</color>
+    <color name="btn_next_press_pf">#1682D8</color>
+    <color name="btn_next_un_press_pf">#2196F3</color>
+    <color name="color_text_btn_next_pf">#fff</color>
+    <color name="color_text_btn_key_pf">#1f1f1f</color>
+    <color name="bg_top_start_pf">#03A9F4</color>
+    <color name="bg_top_end_pf">#3850D1</color>
 </resources>

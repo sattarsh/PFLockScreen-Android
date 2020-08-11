@@ -1,20 +1,20 @@
 <resources>
     <string name="app_name_pf">PFLockScreen</string>
-    <string name="cancel_pf">Cancel</string>
+    <string name="cancel_pf">انصراف</string>
     <string name="use_pin_pf">Use pin</string>
-    <string name="sign_in_pf">Sign in</string>
-    <string name="ok_pf">OK</string>
-    <string name="next_pf">Next</string>
-    <string name="forgot_pf">Forgot?</string>
-    <string name="lock_screen_title_pf">Input pin code or use fingerprint</string>
-    <string name="settings_pf">Settings</string>
-    <string name="no_fingerprints_message_pf">No fingerprints found. Please add fingerprints in the settings if you want to use this authorization method."</string>
-    <string name="no_fingerprints_title_pf">"No fingerprints found"</string>
+    <string name="sign_in_pf">احراز هویت توسط اثر انگشت</string>
+    <string name="ok_pf">باشه</string>
+    <string name="next_pf">مرحله بعد</string>
+    <string name="forgot_pf">رمز خود را فراموش کرده‌اید؟</string>
+    <string name="lock_screen_title_pf">رمز عبور برنامه را وارد نمایید</string>
+    <string name="settings_pf">تنظیمات</string>
+    <string name="no_fingerprints_message_pf">اثر انگشت شناسایی نشد. در صورتی که تمایل دارید اثر انگشت اضافه کنید."</string>
+    <string name="no_fingerprints_title_pf">"اثر انگشت شناسایی نشد."</string>
 
-    <string name="fingerprint_not_recognized_pf">Fingerprint not recognized. Try again</string>
-    <string name="fingerprint_success_pf">Fingerprint recognized</string>
-    <string name="fingerprint_description_pf">Confirm fingerprint to continue</string>
-    <string name="fingerprint_hint_pf">Touch sensor</string>
+    <string name="fingerprint_not_recognized_pf">اثر انگشت نامعتبر است، مجدد تلاش کنید</string>
+    <string name="fingerprint_success_pf">اثر انگشت شناسایی شد</string>
+    <string name="fingerprint_description_pf">انگشت خود را بر روی سنسور قرار دهید</string>
+    <string name="fingerprint_hint_pf">سنسور را لمس کنید</string>
     <string name="description_fingerprint_icon_pf">Fingerprint icon</string>
 
 </resources>

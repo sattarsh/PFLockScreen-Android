@@ -3,4 +3,5 @@
     <dimen name="button_lock_screen_fp_size">60dp</dimen>
     <dimen name="code_fp_size">21dp</dimen>
     <dimen name="code_fp_margin">5dp</dimen>
+    <dimen name="btn_fp_key">22sp</dimen>
 </resources>

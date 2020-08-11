@@ -84,11 +84,11 @@ public class MainActivity extends AppCompatActivity {
 
     private void showLockScreenFragment(boolean isPinExist) {
         final PFFLockScreenConfiguration.Builder builder = new PFFLockScreenConfiguration.Builder(this)
-                .setTitle(isPinExist ? "Unlock with your pin code or fingerprint" : "Create Code")
-                .setCodeLength(6)
-                .setLeftButton("Can't remeber")
+                .setTitle(isPinExist ? "رمز عبور برنامه را وارد نمایید" : "برای محافظت از اطلاعات خود، رمز عبور دلخواه را وارد نمایید")
+                .setCodeLength(4)
+                .setLeftButton("رمز عبور خود را فراموش کرده‌اید؟")
                 .setNewCodeValidation(true)
-                .setNewCodeValidationTitle("Please input code again")
+                .setNewCodeValidationTitle("لطفا رمز دلخواه عبور را مجددا وارد نمایید")
                 .setUseFingerprint(true);
         final PFLockScreenFragment fragment = new PFLockScreenFragment();
 

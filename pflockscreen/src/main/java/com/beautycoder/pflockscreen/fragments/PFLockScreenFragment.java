@@ -21,6 +21,7 @@ import android.view.ViewGroup;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.beautycoder.pflockscreen.PFFLockScreenConfiguration;
@@ -45,7 +46,7 @@ public class PFLockScreenFragment extends Fragment {
             = "com.beautycoder.pflockscreen.instance_state_config";
 
     private View mFingerprintButton;
-    private View mDeleteButton;
+    private ImageView mDeleteButton;
     private TextView mLeftButton;
     private Button mNextButton;
     private PFCodeView mCodeView;
@@ -89,7 +90,8 @@ public class PFLockScreenFragment extends Fragment {
 
         mFingerprintButton = view.findViewById(R.id.button_finger_print);
         mDeleteButton = view.findViewById(R.id.button_delete);
-
+        mDeleteButton.setColorFilter(getResources().getColor(R.color.color_text_btn_key_pf));
+        //mDeleteButton.setBackgroundResource(R.drawable.touch_selector_pf);
         mLeftButton = view.findViewById(R.id.button_left);
         mNextButton = view.findViewById(R.id.button_next);
 
@@ -259,7 +261,7 @@ public class PFLockScreenFragment extends Fragment {
         }
 
         if (codeLength > 0) {
-            mFingerprintButton.setVisibility(View.GONE);
+            //mFingerprintButton.setVisibility(View.GONE);
             mDeleteButton.setVisibility(View.VISIBLE);
             mDeleteButton.setEnabled(true);
             return;
@@ -308,6 +310,7 @@ public class PFLockScreenFragment extends Fragment {
         public void onCodeCompleted(String code) {
             if (mIsCreateMode) {
                 mNextButton.setVisibility(View.VISIBLE);
+
                 mCode = code;
                 return;
             }
@@ -357,11 +360,13 @@ public class PFLockScreenFragment extends Fragment {
                 mCodeValidation = mCode;
                 cleanCode();
                 titleView.setText(mConfiguration.getNewCodeValidationTitle());
+                mNextButton.setText("تایید");
                 return;
             }
             if (mConfiguration.isNewCodeValidation() && !TextUtils.isEmpty(mCodeValidation) && !mCode.equals(mCodeValidation)) {
                 mCodeCreateListener.onNewCodeValidationFailed();
                 titleView.setText(mConfiguration.getTitle());
+                mNextButton.setText("مرحله بعد");
                 cleanCode();
                 return;
             }
@@ -425,6 +430,7 @@ public class PFLockScreenFragment extends Fragment {
         if (mConfiguration.isErrorAnimation()) {
             final Animation animShake = AnimationUtils.loadAnimation(getContext(), R.anim.shake_pf);
             mCodeView.startAnimation(animShake);
+            cleanCode();
         }
     }
 

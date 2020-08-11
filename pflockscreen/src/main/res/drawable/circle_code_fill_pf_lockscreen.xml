@@ -1,16 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <shape
     xmlns:android="http://schemas.android.com/apk/res/android"
-    android:shape="oval">
+    android:shape="rectangle">
 
+    <corners
+        android:radius="2dp"/>
     <stroke
-        android:color="@color/code_lock_screen_pf"
-        android:width="1px"/>
+        android:color="#f4e9ff"
+        android:width="3px"/>
 
     <solid
-        android:color="@color/code_lock_screen_pf"/>
+        android:color="#f4e9ff"/>
 
     <size
-        android:width="@dimen/code_fp_size"
-        android:height="@dimen/code_fp_size"/>
+        android:width="20dp"
+        android:height="20dp"/>
 </shape>
