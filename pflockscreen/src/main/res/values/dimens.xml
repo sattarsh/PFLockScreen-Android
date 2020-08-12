@@ -6,4 +6,7 @@
     <dimen name="code_fp_margin">5dp</dimen>
     <dimen name="btn_fp_key">22sp</dimen>
     <dimen name="btn_fp_txt">15sp</dimen>
+    <dimen name="radius_end_pf">18dp</dimen>
+    <dimen name="mt_btn_pf">16dp</dimen>
+    <dimen name="size_btn_dialog_pf">36dp</dimen>
 </resources>

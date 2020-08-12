@@ -3,6 +3,6 @@
     android:shape="oval">
     <padding android:padding="1dp" />
     <corners android:radius="5dp" />
-    <solid android:color="#3850D1" />
+    <solid android:color="@color/btn_click_key_pf" />
 
 </shape>

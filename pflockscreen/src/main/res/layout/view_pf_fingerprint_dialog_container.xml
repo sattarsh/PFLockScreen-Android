@@ -4,11 +4,13 @@
     android:layout_height="wrap_content"
     android:background="@drawable/corner_dialog"
     android:layout_gravity="center"
+    android:padding="12dp"
     android:orientation="vertical">
 
     <FrameLayout
         android:layout_gravity="center"
         android:layout_width="match_parent"
+        android:layout_margin="12dp"
         android:layout_height="wrap_content">
 
         <include layout="@layout/view_pf_fingerprint_dialog_content" />
@@ -35,15 +37,16 @@
             android:layout_weight="1"
             android:visibility="invisible" />
         <Button
+            android:background="@drawable/bg_btn_next"
             android:gravity="center"
             android:layout_gravity="center"
             android:textSize="12sp"
             android:text="انصراف"
-            android:textColor="#3f3f3f"
+            android:textColor="@color/color_text_btn_next_pf"
             android:id="@+id/cancel_button"
             style="?android:attr/buttonBarNegativeButtonStyle"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
+            android:layout_height="@dimen/size_btn_dialog_pf" />
 
     </LinearLayout>
 

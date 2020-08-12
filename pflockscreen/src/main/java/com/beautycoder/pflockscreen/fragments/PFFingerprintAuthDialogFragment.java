@@ -62,13 +62,7 @@ public class PFFingerprintAuthDialogFragment extends DialogFragment {
         // Do not create a new Fragment when the Activity is re-created such as orientation changes.
         setRetainInstance(true);
         //setStyle(DialogFragment.STYLE_NORMAL, android.R.style.Theme_Material_Light_Dialog);
-        if (getDialog() != null && getDialog().getWindow() != null) {
-            getDialog().getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
-            getDialog().getWindow().requestFeature(Window.FEATURE_NO_TITLE);
-            getDialog().requestWindowFeature(Window.FEATURE_NO_TITLE);
-            getDialog().getWindow().getAttributes().windowAnimations = R.style.PauseDialogAnimation;
 
-        }
     }
 
 
@@ -78,6 +72,13 @@ public class PFFingerprintAuthDialogFragment extends DialogFragment {
         getDialog().setTitle(getString(R.string.sign_in_pf));
         View v = inflater.inflate(R.layout.view_pf_fingerprint_dialog_container, container,
                 false);
+        if (getDialog() != null && getDialog().getWindow() != null) {
+            getDialog().getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+            getDialog().getWindow().requestFeature(Window.FEATURE_NO_TITLE);
+            getDialog().requestWindowFeature(Window.FEATURE_NO_TITLE);
+            getDialog().getWindow().getAttributes().windowAnimations = R.style.PauseDialogAnimation;
+
+        }
         mCancelButton = v.findViewById(R.id.cancel_button);
         mCancelButton.setOnClickListener(new View.OnClickListener() {
             @Override

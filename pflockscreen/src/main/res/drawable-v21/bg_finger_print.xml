@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ripple xmlns:android="http://schemas.android.com/apk/res/android"
-    android:color="#ffc107">
+    android:color="@color/bg_finger_click_pf">
     <item android:id="@android:id/mask">
         <shape android:shape="oval">
             <solid
-                android:color="#ffc107"/>
+                android:color="@color/bg_finger_click_pf"/>
             <corners android:radius="4dp"/>
         </shape>
     </item>
 
     <item android:id="@android:id/background">
         <shape android:shape="oval">
-            <solid android:color="#ff7207"/>
+            <solid android:color="@color/bg_finger_normal_pf"/>
             <corners android:radius="4dp" />
         </shape>
     </item>

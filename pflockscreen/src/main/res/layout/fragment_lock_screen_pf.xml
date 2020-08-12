@@ -270,7 +270,7 @@
                     android:layout_weight="1">
 
                     <ImageView
-                        android:tint="#fff"
+                        android:tint="@color/tint_image_finger_pf"
                         android:id="@+id/button_finger_print"
                         style="?pf_fingerprint_button"
                         android:layout_width="70dp"
@@ -317,6 +317,7 @@
                         android:visibility="gone" />
 
                     <ImageView
+                        android:tint="@color/tint_image_delete_pf"
                         android:id="@+id/button_delete"
                         style="?pf_delete_button"
                         android:layout_width="70dp"
@@ -336,7 +337,7 @@
         </LinearLayout>
 
         <RelativeLayout
-            android:layout_marginTop="16dp"
+            android:layout_marginTop="@dimen/mt_btn_pf"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_alignParentBottom="true"

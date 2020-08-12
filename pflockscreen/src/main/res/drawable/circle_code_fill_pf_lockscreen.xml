@@ -6,13 +6,13 @@
     <corners
         android:radius="2dp"/>
     <stroke
-        android:color="#f4e9ff"
+        android:color="@color/bg_code_pin_pf"
         android:width="3px"/>
 
     <solid
-        android:color="#f4e9ff"/>
+        android:color="@color/bg_code_pin_pf"/>
 
     <size
-        android:width="20dp"
-        android:height="20dp"/>
+        android:width="24dp"
+        android:height="24dp"/>
 </shape>
