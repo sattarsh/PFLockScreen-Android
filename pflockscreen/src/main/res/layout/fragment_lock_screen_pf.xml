@@ -337,20 +337,20 @@
         </LinearLayout>
 
         <RelativeLayout
-            android:layout_marginTop="@dimen/mt_btn_pf"
+
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_alignParentBottom="true"
             android:gravity="center">
 
             <TextView
-                android:layout_centerInParent="true"
+                android:layout_centerHorizontal="true"
                 android:visibility="visible"
                 android:textColor="@color/color_text_btn_key_pf"
                 android:textSize="@dimen/btn_fp_txt"
                 android:id="@+id/button_left"
                 style="?pf_hint"
-                android:padding="12dp"
+                android:layout_marginTop="@dimen/mt_txt_pf"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
@@ -361,6 +361,7 @@
                 android:text="@string/forgot_pf"
                 android:theme="@style/PFLockScreenHintTextStyle" />
             <Button
+                android:layout_marginTop="@dimen/mt_btn_pf"
                 android:textColor="@color/color_text_btn_next_pf"
                 android:gravity="center"
                 android:layout_gravity="center"
