@@ -35,7 +35,6 @@
             android:visibility="invisible" />
         <Button
 
-            android:padding="4dp"
             android:background="@drawable/bg_btn_next"
             android:gravity="center"
             android:layout_gravity="center"
@@ -44,7 +43,7 @@
             android:textColor="@color/color_text_btn_next_pf"
             android:id="@+id/cancel_button"
             android:layout_width="wrap_content"
-            android:layout_height="@dimen/size_btn_dialog_pf" />
+            android:layout_height="wrap_content" />
 
     </LinearLayout>
 
