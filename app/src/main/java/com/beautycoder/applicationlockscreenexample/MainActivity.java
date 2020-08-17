@@ -3,8 +3,12 @@ package com.beautycoder.applicationlockscreenexample;
 import androidx.lifecycle.Observer;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
+
+import android.os.Build;
 import android.os.Bundle;
 import android.view.View;
+import android.view.Window;
+import android.view.WindowManager;
 import android.widget.Toast;
 
 import com.beautycoder.pflockscreen.PFFLockScreenConfiguration;
@@ -20,7 +24,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         showLockScreenFragment();
-        //PFSecurityManager.getInstance().setPinCodeHelper(new TestPFPinCodeHelperImpl());
+        changeStatusBarColor();
     }
 
     private final PFLockScreenFragment.OnPFLockScreenCodeCreateListener mCodeCreateListener =
@@ -119,6 +123,13 @@ public class MainActivity extends AppCompatActivity {
         getSupportFragmentManager().beginTransaction()
                 .replace(R.id.container_view, fragment).commit();
     }
-
+    private void changeStatusBarColor() {
+        if (Build.VERSION.SDK_INT >= 21) {
+            Window window = getWindow();
+            window.clearFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
+            window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS);
+            window.setStatusBarColor(getResources().getColor(R.color.bg_pf));
+        }
+    }
 
 }

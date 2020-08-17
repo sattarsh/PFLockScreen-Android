@@ -13,6 +13,7 @@
     <color name="color_text_btn_key_pf">#1f1f1f</color>
     <color name="bg_top_start_pf">#03A9F4</color>
     <color name="bg_top_end_pf">#3850D1</color>
+    <color name="bg_pf">#3850D1</color>
     <color name="bg_end_pf">#fff</color>
     <color name="bg_finger_normal_pf">#FF9800</color>
     <color name="bg_finger_click_pf">#FFC107</color>

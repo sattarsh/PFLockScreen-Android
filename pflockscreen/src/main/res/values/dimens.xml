@@ -1,13 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <dimen name="button_lock_screen_fp_size">70dp</dimen>
+    <dimen name="button_lock_screen_fp_size">65dp</dimen>
     <dimen name="button_lock_screen_fp_margin_vertical">25dp</dimen>
     <dimen name="code_fp_size">20dp</dimen>
     <dimen name="code_fp_margin">5dp</dimen>
-    <dimen name="btn_fp_key">22sp</dimen>
+    <dimen name="btn_fp_key">23sp</dimen>
     <dimen name="btn_fp_txt">15sp</dimen>
     <dimen name="radius_end_pf">18dp</dimen>
     <dimen name="mt_btn_pf">16dp</dimen>
     <dimen name="mt_txt_pf">24dp</dimen>
-    <dimen name="size_btn_dialog_pf">36dp</dimen>
+    <dimen name="size_btn_dialog_pf">32dp</dimen>
+    <dimen name="mb_relative_btn_fp">4dp</dimen>
+    <dimen name="size_txt_dialog_fp">13sp</dimen>
 </resources>

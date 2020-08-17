@@ -4,13 +4,12 @@
     android:layout_height="wrap_content"
     android:background="@drawable/corner_dialog"
     android:layout_gravity="center"
-    android:padding="12dp"
+    android:padding="16dp"
     android:orientation="vertical">
 
     <FrameLayout
         android:layout_gravity="center"
         android:layout_width="match_parent"
-        android:layout_margin="12dp"
         android:layout_height="wrap_content">
 
         <include layout="@layout/view_pf_fingerprint_dialog_content" />
@@ -18,33 +17,32 @@
     </FrameLayout>
 
     <LinearLayout
+        android:layout_marginTop="@dimen/mt_btn_pf"
         android:gravity="center"
         android:layout_gravity="center"
         android:id="@+id/buttonPanel"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:paddingStart="12dp"
-        android:paddingEnd="12dp"
-        android:paddingTop="4dp"
-        android:paddingBottom="4dp"
-        style="?android:attr/buttonBarStyle">
+        android:orientation="horizontal">
 
         <Space
+            android:layout_marginRight="8dp"
+            android:layout_marginLeft="8dp"
             android:id="@+id/spacer"
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:layout_weight="1"
             android:visibility="invisible" />
         <Button
+
+            android:padding="4dp"
             android:background="@drawable/bg_btn_next"
             android:gravity="center"
             android:layout_gravity="center"
-            android:textSize="12sp"
+            android:textSize="@dimen/size_txt_dialog_fp"
             android:text="انصراف"
             android:textColor="@color/color_text_btn_next_pf"
             android:id="@+id/cancel_button"
-            style="?android:attr/buttonBarNegativeButtonStyle"
             android:layout_width="wrap_content"
             android:layout_height="@dimen/size_btn_dialog_pf" />
 
