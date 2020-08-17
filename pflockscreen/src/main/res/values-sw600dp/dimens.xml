@@ -11,5 +11,5 @@
     <dimen name="mt_txt_pf">24dp</dimen>
     <dimen name="size_btn_dialog_pf">32dp</dimen>
     <dimen name="mb_relative_btn_fp">16dp</dimen>
-    <dimen name="size_txt_dialog_fp">24sp</dimen>
+    <dimen name="size_txt_dialog_fp">13sp</dimen>
 </resources>

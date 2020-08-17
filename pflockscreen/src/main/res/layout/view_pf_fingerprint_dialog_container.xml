@@ -38,7 +38,7 @@
             android:background="@drawable/bg_btn_next"
             android:gravity="center"
             android:layout_gravity="center"
-            android:textSize="@dimen/size_txt_dialog_fp"
+
             android:text="انصراف"
             android:textColor="@color/color_text_btn_next_pf"
             android:id="@+id/cancel_button"
