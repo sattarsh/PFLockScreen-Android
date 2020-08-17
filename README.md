@@ -1,14 +1,6 @@
 # PFLockScreen-Android
 
-[![](https://jitpack.io/v/thealeksandr/PFLockScreen-Android.svg)](https://jitpack.io/#thealeksandr/PFLockScreen-Android)
 
-**Feel free to ask questions add issues.** If I don't respond to an issue or PR, feel free to ping me or send me **DIRECT Message** on twitter @thealeksandr. If you create issue it would be nice if you **SUBSCRIBE FOR UPDATES**. So we can discuss it.
-
-**Please support with a Star :D**
-
-## 
-7 Update - Bug fixing (November 3, 2019)
-* Added code validation for CREATE mode.
 
 ## Min SDK Version - 15
 
@@ -32,7 +24,7 @@ allprojects {
 
 ```gradle
 dependencies {
-	compile 'com.github.thealeksandr:PFLockScreen-Android:1.0.0-beta7'
+	implementation 'com.github.sattarsh:PFLockScreen-Android:1.0.0-beta10'
 }
 ```
 
