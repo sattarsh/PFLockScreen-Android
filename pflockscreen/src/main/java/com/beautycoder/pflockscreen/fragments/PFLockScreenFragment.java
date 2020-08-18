@@ -4,9 +4,13 @@ import android.app.AlertDialog;
 
 import androidx.annotation.NonNull;
 import androidx.lifecycle.Observer;
+
+import android.app.Dialog;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.Vibrator;
@@ -18,6 +22,8 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.Window;
+import android.view.WindowManager;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.Button;
@@ -289,7 +295,39 @@ public class PFLockScreenFragment extends Fragment {
 
 
     private void showNoFingerprintDialog() {
-        new AlertDialog.Builder(getContext())
+        View v2 = LayoutInflater.from(getContext()).inflate(R.layout.dialog_setting, null);
+        final Dialog dialog2 = new Dialog(getContext());
+        dialog2.requestWindowFeature(Window.FEATURE_NO_TITLE);
+        dialog2.setContentView(v2);
+        dialog2.setCancelable(true);
+        Button btnSetting = v2.findViewById(R.id.setting_button_setting);
+        Button btnCancel = v2.findViewById(R.id.cancel_button_setting);
+
+        btnCancel.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                dialog2.dismiss();
+            }
+        });
+        btnSetting.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(
+                        new Intent(android.provider.Settings.ACTION_SECURITY_SETTINGS)
+                );
+                dialog2.dismiss();
+            }
+        });
+
+        dialog2.setCancelable(true);
+        dialog2.setCanceledOnTouchOutside(true);
+        dialog2.getWindow().setLayout(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT);
+        dialog2.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+        dialog2.getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_MASK_STATE);
+        dialog2.getWindow().getAttributes().windowAnimations = R.style.PauseDialogAnimation;
+        dialog2.show();
+
+        /*new AlertDialog.Builder(getContext())
                 .setTitle(R.string.no_fingerprints_title_pf)
                 .setMessage(R.string.no_fingerprints_message_pf)
                 .setCancelable(true)
@@ -301,7 +339,7 @@ public class PFLockScreenFragment extends Fragment {
                                 new Intent(android.provider.Settings.ACTION_SECURITY_SETTINGS)
                         );
                     }
-                }).create().show();
+                }).create().show();*/
     }
 
 
