@@ -41,7 +41,7 @@ import com.beautycoder.pflockscreen.R;
 @RequiresApi(api = Build.VERSION_CODES.M)
 public class PFFingerprintAuthDialogFragment extends DialogFragment {
 
-    private TextView mCancelButton;
+    private Button mCancelButton;
     private View mFingerprintContent;
 
     private Stage mStage = Stage.FINGERPRINT;

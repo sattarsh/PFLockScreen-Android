@@ -40,14 +40,15 @@
             android:layout_height="0dp"
             android:layout_weight="1"
             android:visibility="invisible" />
-        <TextView
-            android:background="?attr/selectableItemBackground"
-            android:padding="4dp"
+        <Button
+            android:paddingLeft="8dp"
+            android:paddingRight="8dp"
+            android:background="@drawable/bg_btn_next"
             android:gravity="center"
             android:layout_gravity="center"
             android:textSize="@dimen/size_txt_dialog_fp"
             android:text="@string/cancel_dialog_finger_print"
-            android:textColor="@color/bg_pf"
+            android:textColor="@color/color_text_btn_next_pf"
             android:id="@+id/cancel_button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
