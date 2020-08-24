@@ -4,10 +4,17 @@
     android:layout_height="wrap_content"
     android:background="@drawable/corner_dialog"
     android:layout_gravity="center"
-    android:padding="16dp"
+    android:paddingTop="16dp"
+    android:paddingBottom="16dp"
+    android:paddingRight="20dp"
+    android:paddingLeft="20dp"
     android:orientation="vertical">
 
+
+
+
     <FrameLayout
+        android:layout_marginBottom="@dimen/mt_btn_pf"
         android:layout_gravity="center"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
@@ -33,14 +40,14 @@
             android:layout_height="0dp"
             android:layout_weight="1"
             android:visibility="invisible" />
-        <Button
-
-            android:background="@drawable/bg_btn_next"
+        <TextView
+            android:background="?attr/selectableItemBackground"
+            android:padding="4dp"
             android:gravity="center"
             android:layout_gravity="center"
-
-            android:text="انصراف"
-            android:textColor="@color/color_text_btn_next_pf"
+            android:textSize="@dimen/size_txt_dialog_fp"
+            android:text="@string/cancel_dialog_finger_print"
+            android:textColor="@color/bg_pf"
             android:id="@+id/cancel_button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />

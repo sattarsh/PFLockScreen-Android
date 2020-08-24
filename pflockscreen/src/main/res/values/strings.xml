@@ -5,12 +5,13 @@
     <string name="sign_in_pf">احراز هویت توسط اثر انگشت</string>
     <string name="ok_pf">باشه</string>
     <string name="next_pf">مرحله بعد</string>
+    <string name="next_pf_2">تایید رمز</string>
     <string name="forgot_pf">رمز خود را فراموش کرده‌اید؟</string>
     <string name="lock_screen_title_pf">رمز عبور برنامه را وارد نمایید</string>
     <string name="settings_pf">تنظیمات</string>
-    <string name="no_fingerprints_message_pf">با ورود به تنظیمات اثر انگشت خود را تعریف کنید"</string>
-    <string name="no_fingerprints_title_pf">"اثر انگشت شناسایی نشد"</string>
-
+    <string name="no_fingerprints_message_pf">با ورود به تنظیمات اثر انگشت خود را تعریف کنید</string>
+    <string name="no_fingerprints_title_pf">اثر انگشت شناسایی نشد</string>
+    <string name="cancel_dialog_finger_print">مایلم با رمز عبور وارد شوم</string>
     <string name="fingerprint_not_recognized_pf">اثر انگشت نامعتبر است، مجدد تلاش کنید</string>
     <string name="fingerprint_success_pf">اثر انگشت شناسایی شد</string>
     <string name="fingerprint_description_pf">انگشت خود را بر روی سنسور قرار دهید</string>

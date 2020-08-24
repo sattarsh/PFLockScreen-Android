@@ -93,7 +93,8 @@ public class MainActivity extends AppCompatActivity {
                 .setLeftButton("رمز عبور خود را فراموش کرده‌اید؟")
                 .setNewCodeValidation(true)
                 .setNewCodeValidationTitle("لطفا رمز دلخواه عبور را مجددا وارد نمایید")
-                .setUseFingerprint(true);
+                .setUseFingerprint(true)
+                .setAutoShowFingerprint(true);
         final PFLockScreenFragment fragment = new PFLockScreenFragment();
 
         fragment.setOnLeftButtonClickListener(new View.OnClickListener() {

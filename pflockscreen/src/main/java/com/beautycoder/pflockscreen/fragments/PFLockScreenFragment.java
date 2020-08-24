@@ -3,6 +3,7 @@ package com.beautycoder.pflockscreen.fragments;
 import android.app.AlertDialog;
 
 import androidx.annotation.NonNull;
+import androidx.fragment.app.FragmentTransaction;
 import androidx.lifecycle.Observer;
 
 import android.app.Dialog;
@@ -29,6 +30,7 @@ import android.view.animation.AnimationUtils;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.beautycoder.pflockscreen.PFFLockScreenConfiguration;
 import com.beautycoder.pflockscreen.R;
@@ -74,7 +76,7 @@ public class PFLockScreenFragment extends Fragment {
     private final PFPinCodeViewModel mPFPinCodeViewModel = new PFPinCodeViewModel();
 
     private View.OnClickListener mOnLeftButtonClickListener = null;
-
+    private Fragment prev;
     @Override
     public void onSaveInstanceState(@NonNull Bundle outState) {
         super.onSaveInstanceState(outState);
@@ -118,18 +120,45 @@ public class PFLockScreenFragment extends Fragment {
 
         mRootView = view;
         applyConfiguration(mConfiguration);
-
+        showDialogFingerPrint();
         return view;
     }
 
-    @Override
-    public void onStart() {
+    private void showDialogFingerPrint() {
+        prev = getFragmentManager().findFragmentByTag(FINGERPRINT_DIALOG_FRAGMENT_TAG);
         if (!mIsCreateMode && mUseFingerPrint && mConfiguration.isAutoShowFingerprint() &&
                 isFingerprintApiAvailable(getActivity()) && isFingerprintsExists(getActivity())) {
-            mOnFingerprintClickListener.onClick(mFingerprintButton);
+            if(prev == null){
+                mOnFingerprintClickListener.onClick(mFingerprintButton);
+            }
+
+        }
+    }
+    @Override
+    public void onDestroyView() {
+        super.onDestroyView();
+        if (getActivity().getSupportFragmentManager() != null && prev != null &&
+                prev.isAdded()) {
+            FragmentTransaction trans =
+                    getActivity().getSupportFragmentManager().beginTransaction();
+            trans.remove(prev).commitAllowingStateLoss();
+        }
+    }
+
+
+
+    /*@Override
+    public void onStart() {
+        Fragment prev = getFragmentManager().findFragmentByTag(FINGERPRINT_DIALOG_FRAGMENT_TAG);
+        if (!mIsCreateMode && mUseFingerPrint && mConfiguration.isAutoShowFingerprint() &&
+                isFingerprintApiAvailable(getActivity()) && isFingerprintsExists(getActivity())) {
+            if(prev == null){
+                mOnFingerprintClickListener.onClick(mFingerprintButton);
+            }
+
         }
         super.onStart();
-    }
+    }*/
 
     public void setConfiguration(PFFLockScreenConfiguration configuration) {
         this.mConfiguration = configuration;
@@ -255,6 +284,8 @@ public class PFLockScreenFragment extends Fragment {
             });
         }
     };
+
+
 
     private void configureRightButton(int codeLength) {
         if (mIsCreateMode) {
@@ -398,13 +429,13 @@ public class PFLockScreenFragment extends Fragment {
                 mCodeValidation = mCode;
                 cleanCode();
                 titleView.setText(mConfiguration.getNewCodeValidationTitle());
-                mNextButton.setText("تایید");
+                mNextButton.setText(getResources().getString(R.string.next_pf_2));
                 return;
             }
             if (mConfiguration.isNewCodeValidation() && !TextUtils.isEmpty(mCodeValidation) && !mCode.equals(mCodeValidation)) {
                 mCodeCreateListener.onNewCodeValidationFailed();
                 titleView.setText(mConfiguration.getTitle());
-                mNextButton.setText("مرحله بعد");
+                mNextButton.setText(getResources().getString(R.string.next_pf));
                 cleanCode();
                 return;
             }
