@@ -134,16 +134,7 @@ public class PFLockScreenFragment extends Fragment {
 
         }
     }
-    @Override
-    public void onDestroyView() {
-        super.onDestroyView();
-        if (getActivity().getSupportFragmentManager() != null && prev != null &&
-                prev.isAdded()) {
-            FragmentTransaction trans =
-                    getActivity().getSupportFragmentManager().beginTransaction();
-            trans.remove(prev).commitAllowingStateLoss();
-        }
-    }
+
 
 
 
