@@ -193,11 +193,7 @@ public class PFLockScreenFragment extends Fragment {
 
         mNextButton.setVisibility(View.INVISIBLE);
         mCodeView.setCodeLength(mConfiguration.getCodeLength());
-        if(mFingerprintHardwareDetected){
-            mFingerprintButton.setVisibility(View.VISIBLE);
-        }else {
-            mFingerprintButton.setVisibility(View.GONE);
-        }
+
     }
 
     private void initKeyViews(View parent) {
