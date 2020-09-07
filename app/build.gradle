@@ -12,7 +12,7 @@ android {
     }
     buildTypes {
         release {
-            minifyEnabled false
+            minifyEnabled true
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
@@ -27,4 +27,6 @@ dependencies {
     androidTestImplementation 'androidx.test:runner:1.1.2-alpha01'
     androidTestImplementation 'androidx.test:rules:1.1.2-alpha01'
     implementation project(':pflockscreen')
+    implementation 'io.github.inflationx:calligraphy3:3.1.1'
+    implementation 'io.github.inflationx:viewpump:2.0.3'
 }

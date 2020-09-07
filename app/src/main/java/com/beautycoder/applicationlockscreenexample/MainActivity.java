@@ -17,7 +17,7 @@ import com.beautycoder.pflockscreen.security.PFResult;
 import com.beautycoder.pflockscreen.security.PFSecurityManager;
 import com.beautycoder.pflockscreen.viewmodels.PFPinCodeViewModel;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends MyActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,6 +33,7 @@ public class MainActivity extends AppCompatActivity {
                 public void onCodeCreated(String encodedCode) {
                     Toast.makeText(MainActivity.this, "Code created", Toast.LENGTH_SHORT).show();
                     PreferencesSettings.saveToPref(MainActivity.this, encodedCode);
+                    showMainFragment();
                 }
 
                 @Override
